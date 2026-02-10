@@ -8,60 +8,25 @@ def medical_help(illness):
     
     if illness in medical_advice:
         for line in medical_advice[illness]:
-            input(line)
+            input(line) #This will show the user the medical advice for the illness they are asking about.
     else:
-        print("Sorry, we don't have treatment for that illness.")
-print("Welcome! We are here to help you with medical advice!") 
-choice = input("Do you need medical assistance? (yes/no) ")
+        print("Sorry, we don't have treatment for that illness.") # This shows the user that we do not have advice for the illness they are asking about.
+print("Welcome! We are here to help you with medical advice!") #This is the welcome message for the user when they start the program.
+choice = input("Do you need medical assistance? (yes/no) ") #This is the first question that the user will be asked, and it will determine if they will be able to get medical advice or not.
 if choice == "no":
-    print("Okay, stay healthy and fit!")
+    print("Okay, stay healthy and fit!") #This if statement wil end the program if the user does not need medical help.
 while choice == "yes":
     print("We are here to help you!")
     question = input("Do you need help with a covid-19, flu, or allergies? ")
     medical_help(question)
-    choice = input("Do you need more medical advice? (yes/finished) ")
+    choice = input("Do you need more medical advice? (yes/finished) ") #This while loop will allow the user to ask for more medical advice if they need it, and it will end the program if they are finished.
 if choice == "finished":
     rate = int(input("Please rate our service 1-10! "))
     final_score = int(rate * 10)
     print(str(final_score) + " percent satisfaction rate")
-    friend = input("Would you recommend our service to a friend? (yes/maybe/no) ")
+    friend = input("Would you recommend our service to a friend? (yes/maybe/no) ") #This is the final question of the program, and it will ask the user if they would recommend our service to a friend.
 
     if friend == "yes" or friend == "maybe":
         print("Thanks, we appreciate it. ")
     else:
-        print("Sorry we could not meet your expectations. ")
-
-
-# def joke_game(joke_choice):
-#     jokes = {
-#         "wizards": ["Where does a scientist wizard work?", "In a labracadrabratory\U0001F923",  ], #"\U0001F923" Is code for the importation of an emoji
-#         "bears": ["What do you call a bear with no teeth?", "A gummy bear\U0001F923", ],
-#         "pirates": ["Why couldn’t the pirate find his playing cards?", "He was standing on the deck\U0001F923", ],
-#     } #This is our list with the jokes we will be referencing and referring to in the future
-    
-#     if joke_choice in jokes:
-#         for line in jokes[joke_choice]:
-#             input(line)
-#     else:
-#         print("Sorry, we don't have that joke.")
-# print("Welcome to the Joke Game!") 
-# joke = input("Do you want to hear a joke? (yes/no) ")
-# if joke == "no":
-#     print("Okay suit yourself!")
-# while joke == "yes":
-#     print("Great, Let's Play")
-#     question = input("Do you want to hear a joke about wizards, bears, or pirates? ")
-#     joke_game(question)
-#     joke = input("Do you want to hear another joke or are you finished? (yes/finished) ")
-# if joke == "finished":
-#     rate = int(input("Please rate our game 1-10! "))
-#     final_score = int(rate * 10)
-#     print(str(final_score) + " percent satisfaction rate")
-#     friend = input("Would you recommend this game to a friend? (yes/maybe/no) ")
-
-#     if friend == "yes" or friend == "maybe":
-#         print("Thanks, we appreciate it. ")
-#     else:
-#         print("Sorry you did not enjoy it. ")
-
-
+        print("Sorry we could not meet your expectations. ") #This is the end of the program, and it will thank the user for their feedback or apologize if they were not satisfied with the service.
